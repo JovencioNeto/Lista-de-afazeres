@@ -2,7 +2,7 @@ body{
     padding: 30px;
     color: #333;
     background-color: #f4f4f4;
-    background-image: url('./background.png');
+    background-image: url('../background.png');
     background-position: center;
     background-size: cover;
 }
