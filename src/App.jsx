@@ -1,9 +1,10 @@
 import { useState } from "react";
 
 import './App.css'
-import All from "./components/List";
+import List from "./components/List";
+import FormList from "./components/List/FormList";
 
-function App(){
+export default function App(){
   const[all, setAll] = useState([
     {
       id: 1,
@@ -31,12 +32,10 @@ function App(){
       <h1>Lista de Tarefas</h1>
       <div className="all-list">
         {all.map((all)=>(
-          <All/>
+          <List task={all}/>
         ))}
       </div>
+      <FormList/>
     </div>
   )
-   
 }
-
-export default App;
