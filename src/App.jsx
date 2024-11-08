@@ -1,31 +1,17 @@
-import { useState } from "react";
+import { useState } from "react"
 
 import './App.css'
 
-import List from "./components/List";
-import FormList from "./components/List/FormList";
+import List from "./components/List"
+import FormList from "./components/FormList"
+import Search from "./components/Search"
 
-export default function App(){
+export default function App() {
   const [all, setAll] = useState([
-    {
-      id: 1,
-      text: 'Criar funcionalidade X no sistema',
-      category: 'Trabalho',
-      isCompleted: false,
-    },
-    {
-      id: 2,
-      text: 'Ir para a academia',
-      category: 'Pessoal',
-      isCompleted: false,
-    },
-    {
-      id: 3,
-      text: 'Estudar React',
-      category: 'Estudos',
-      isCompleted: false,
-    },
-  ]);
+    
+  ])
+
+  const [search, setSearch] = useState("")
 
   const addAll = (text, category) => {
     const newAll = [
@@ -36,24 +22,36 @@ export default function App(){
         category,
         isCompleted: false,
       },
-    ];
-    setAll(newAll);
-  };
+    ]
+    setAll(newAll)
+  }
 
   const removeAll = (id) => {
-    const filteredAll = all.filter((task) => task.id !== id);
-    setAll(filteredAll);
-  };
+    const filteredAll = all.filter((task) => task.id !== id)
+    setAll(filteredAll)
+  }
+
+  const completedAll = (id) => {
+    const updatedAll = all.map((task) =>
+      task.id === id ? { ...task, isCompleted: !task.isCompleted } : task
+    )
+    setAll(updatedAll)
+  }
 
   return (
     <div className="app">
       <h1>Lista de Tarefas</h1>
+      <Search search={search} setSearch={setSearch} />
       <div className="all-list">
-        {all.map((task) => (
-          <List key={task.id} task={task} removeAll={removeAll} />
-        ))}
+        {all
+          .filter((task) =>
+            task.text.toLowerCase().includes(search.toLowerCase())
+          )
+          .map((task) => (
+            <List key={task.id} task={task} removeAll={removeAll} completedAll={completedAll} />
+          ))}
       </div>
       <FormList addAll={addAll} />
     </div>
-  );
+  )
 }
