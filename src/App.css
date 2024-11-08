@@ -42,7 +42,7 @@ button{
     font-weight: 600;
 }
 
-button:hover{
+.task-button:hover{
     cursor: pointer;
     transform: scale(1.05);
     background-color: #97a0f5;
@@ -51,6 +51,9 @@ button:hover{
 
 .all-list{
     padding-bottom: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #555;
 }
 
 input, select{
@@ -59,4 +62,37 @@ input, select{
     border: 1px solid #DDD;
     border-radius: 5px;
     width: 100%;
+}
+
+.complete{
+    background-color: #5cb85c;
+}
+.complete:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: #7de47d;
+    opacity: 1;
+}
+.remove{
+    background-color: #d9534f;
+    margin-left: 20px;
+}
+
+.remove:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: #ff8d89;
+    opacity: 1;
+}
+
+.task{
+    background-color: #FFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 }
