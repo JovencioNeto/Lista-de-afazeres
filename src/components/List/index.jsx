@@ -1,4 +1,4 @@
-import React from "react";
+import styles from './styles.module.css'
 
 export default function List({ task, removeAll, completedAll}) {
   return (
@@ -8,9 +8,9 @@ export default function List({ task, removeAll, completedAll}) {
         <p className="category">({task.category})</p>
       </div>
       <div>
-        <button className="complete" onClick={() => completedAll(task.id)}>Completar</button>
-        <button className="remove" onClick={() => removeAll(task.id)}>x</button>
+        <button className={styles.complete} onClick={() => completedAll(task.id)}>Completar</button>
+        <button className={styles.remove} onClick={() => removeAll(task.id)}>x</button>
       </div>
     </div>
-  );
+  )
 }

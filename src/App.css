@@ -5,6 +5,7 @@ body{
     background-image: url('../background.png');
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .app{
@@ -42,13 +43,6 @@ button{
     font-weight: 600;
 }
 
-.task-button:hover{
-    cursor: pointer;
-    transform: scale(1.05);
-    background-color: #97a0f5;
-    opacity: 1;
-}
-
 .all-list{
     padding-bottom: 1.5rem;
     margin-bottom: 20px;
@@ -64,27 +58,6 @@ input, select{
     width: 100%;
 }
 
-.complete{
-    background-color: #5cb85c;
-}
-.complete:hover{
-    cursor: pointer;
-    transform: scale(1.05);
-    background-color: #7de47d;
-    opacity: 1;
-}
-.remove{
-    background-color: #d9534f;
-    margin-left: 20px;
-}
-
-.remove:hover{
-    cursor: pointer;
-    transform: scale(1.05);
-    background-color: #ff8d89;
-    opacity: 1;
-}
-
 .task{
     background-color: #FFF;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -95,3 +68,4 @@ input, select{
     justify-content: space-between;
     align-items: center;
 }
+

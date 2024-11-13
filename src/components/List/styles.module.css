@@ -1,0 +1,27 @@
+
+.complete{
+    background-color: #5cb85c;
+}
+.complete:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: #7de47d;
+    opacity: 1;
+}
+.remove{
+    background-color: #d9534f;
+    margin-left: 20px;
+}
+
+.remove:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: #ff8d89;
+    opacity: 1;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+  
