@@ -1,4 +1,4 @@
-.task-button:hover{
+.taskButton:hover{
     cursor: pointer;
     transform: scale(1.05);
     background-color: #97a0f5;

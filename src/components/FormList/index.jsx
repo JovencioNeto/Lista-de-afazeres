@@ -38,7 +38,7 @@ export default function FormList({ addAll }) {
           <option value="Familia">Família</option>
           <option value="Amigos">Amigos</option>
         </select>
-        <button type="submit" className="task-button">Criar uma Tarefa</button>
+        <button type="submit" className={styles.taskButton}>Criar uma Tarefa</button>
       </form>
     </div>
   )
