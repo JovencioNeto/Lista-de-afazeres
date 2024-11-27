@@ -12,7 +12,7 @@ export default function Filter({ filter, setFilter, setSort }) {
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
         >
-          <option value="All">All</option>
+          <option value="All">Todas</option>
           <option value="Completed">Completas</option>
           <option value="Incomplete">Incompletas</option>
         </select>
