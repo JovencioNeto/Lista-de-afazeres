@@ -19,8 +19,8 @@ export default function Filter({ filter, setFilter, setSort }) {
       </div>
       <div>
         <p>Ordem alfabética:</p>
-        <button onClick={() => setSort("Asc")} className={styles.ascButton}>A-Z</button>
-        <button onClick={() => setSort("Desc")} className={styles.descButton}>Z-A</button>
+        <button onClick={() => setSort("Asc")} className={styles.ascButton}>Asc</button>
+        <button onClick={() => setSort("Desc")} className={styles.descButton}>Desc</button>
       </div>
     </div>
   )
